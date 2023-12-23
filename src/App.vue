@@ -11,7 +11,6 @@ const activeBreadcrumb = computed(() => {
     path: options.routes[index].path,
     label: options.routes[index].label
   }));
-  console.log(route);
   return result;
 });
 
@@ -20,8 +19,8 @@ const activeBreadcrumb = computed(() => {
 <template>
   <a-layout>
     <a-layout-header>
-      <a-menu theme="dark" mode="horizontal" :selectedKeys="activePath">
-        <a-menu-item v-for="item in options.routes" key="item.path">
+      <a-menu theme="dark" mode="horizontal" v-model:selectedKeys="activePath">
+        <a-menu-item v-for="item in options.routes" :key="item.path">
           <RouterLink :to="item.path">{{item.label}}</RouterLink>
         </a-menu-item>
       </a-menu>
