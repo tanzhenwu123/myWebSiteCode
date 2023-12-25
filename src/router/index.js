@@ -12,11 +12,11 @@ const router = createRouter({
       component: HomeView
     },
     {
-      path: '/aboutMe',
-      name: 'aboutMe',
-      key: '/aboutName',
-      label: '关于我',
-      component: () => import('../views/aboutMe/index.vue')
+      path: '/blogPage',
+      name: 'blogPage',
+      key: '/blogPage',
+      label: '博客',
+      component: () => import('../views/blogPage/index.vue')
     }
   ]
 })
